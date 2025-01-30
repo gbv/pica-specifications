@@ -1,12 +1,49 @@
----
-title: PICA XML
----
+# PICA XML
 
-See <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> (2008)
+## Background
 
+PICA XML without XML Namespace is being used to serve PICA+ records via SRU since the early 2000s. In 2006 the format was documented at VZG with XML Namespace and XML Schema, and a stable version 1.0 was published at July 3rd, 2008^[See <https://web.archive.org/web/20080913003622/http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>]. OCLC decided against officially adopting it, so alternative forms of encoding PICA in XML have evolved as well. The format is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`.
+
+:::{.callout-warn}
+The current specification does not allow for occurrences > 99 although they are allowed on level 2 fields.
+:::
+
+:::{.callout-note}
+This is work in progress. See <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0>.
+:::
+
+## Definition
+
+...
 
 ## Example
 
 ~~~.xml
- {{< include examples/pica-xml.xml >}}
+{{< include examples/pica-xml.xml >}}
 ~~~
+
+## Schemas
+
+### XML Schema
+
+The XML Schema of PICA XML is also available at <https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd>.
+
+~~~xml
+{{< include schemas/pica-xml-v1-0.xsd >}}
+~~~
+
+### DTD
+
+The following Document Type Definition (DTD) defines a superset of PICA XML without restriction on attribute values and without namespace requirement:
+
+~~~dtd
+<!ELEMENT collection (record+)>
+<!ELEMENT record (datafield+)>
+<!ELEMENT datafield (subfield+)>
+<!ATTLIST datafield 
+  tag CDATA #REQUIRED
+  occurrence CDATA #IMPLIED>
+<!ELEMENT subfield (#PCDATA)*>
+<!ATTLIST subfield code CDATA #IMPLIED>
+~~~
+

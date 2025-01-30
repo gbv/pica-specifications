@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record xmlns="info:srw/schema/5/picaXML-v1.0"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="info:srw/schema/5/picaXML-v1.0 http://www.oclcpica.org/xml/picaplus.xsd">
-  <!-- please change http://www.oclcpica.org/xml/picaplus.xsd to your local copy of the XML schema or use a catalog file! -->
+        xsi:schemaLocation="info:srw/schema/5/picaXML-v1.0 https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd">
   <datafield tag="001@">
     <subfield code="0">0917:14-03-05</subfield>
   </datafield>
