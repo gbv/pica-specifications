@@ -1,0 +1,7 @@
+---
+title: PICA Normalized
+---
+
+Preferred machine-readable form of PICA records.
+
+See <http://format.gbv.de/pica/normalized>

@@ -1,0 +1,5 @@
+# PICA Plain
+
+Preferred human-readable form of PICA records and base of [PICA Patch](pica-patch.qmd).
+
+See <http://format.gbv.de/pica/plain>

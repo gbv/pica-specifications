@@ -1,0 +1,12 @@
+---
+title: PICA XML
+---
+
+See <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> (2008)
+
+
+## Example
+
+~~~.xml
+ {{< include examples/pica-xml.xml >}}
+~~~

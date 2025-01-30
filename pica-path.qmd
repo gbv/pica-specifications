@@ -1,0 +1,16 @@
+---
+title: PICA Path
+---
+
+See <http://format.gbv.de/query/picapath>.
+
+```{.ebnf #lst-path-grammar lst-cap="Formal grammar of PICA Path"}
+path              ::=  ( tag | xtag ) occurrence? subfields?
+tag               ::=  [012.] [0-9.] [0-9.] [A-Z@.]
+xtag              ::=  "2" [0-9.] [0-9.] [A-Z@.] "x" number
+occurrence        ::=  "/" occurrenceValue
+occurrenceValue   ::=  number "-" number | occurrencePattern | "*"
+occurrencePattern ::=  [0-9] [0-9]? [0-9]?
+subfields         ::=  [$.]? ( [A-Za-z0-9]+ | "*" )
+number            ::=  [0-9]+
+```

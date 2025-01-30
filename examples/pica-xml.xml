@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record xmlns="info:srw/schema/5/picaXML-v1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="info:srw/schema/5/picaXML-v1.0 http://www.oclcpica.org/xml/picaplus.xsd">
+  <!-- please change http://www.oclcpica.org/xml/picaplus.xsd to your local copy of the XML schema or use a catalog file! -->
+  <datafield tag="001@">
+    <subfield code="0">0917:14-03-05</subfield>
+  </datafield>
+  <datafield tag="001B">
+    <subfield code="0">0917:23-03-05</subfield>
+    <subfield code="t">16:15:13.000</subfield>
+  </datafield>
+  <datafield tag="001D">
+    <subfield code="0">0917:23-03-05</subfield>
+  </datafield>
+  <datafield tag="001X">
+    <subfield code="0">0</subfield>
+  </datafield>
+  <datafield tag="002@">
+    <subfield code="0">Aau</subfield>
+  </datafield>
+  <datafield tag="003@">
+    <subfield code="0">481592954</subfield>
+  </datafield>
+  <datafield tag="004A">
+    <subfield code="0">3774250936</subfield>
+  </datafield>
+  <datafield tag="011@">
+    <subfield code="a">2004</subfield>
+  </datafield>
+  <datafield tag="021A">
+    <subfield code="a">Der Hamster</subfield>
+    <subfield code="d">artgerecht halten, gesund ernähren, richtig verstehen</subfield>
+    <subfield code="h">Peter Hollmann</subfield>
+  </datafield>
+  <datafield tag="028A">
+    <subfield code="d">Peter</subfield>
+    <subfield code="a">Hollmann</subfield>
+  </datafield>
+  <datafield tag="032@">
+    <subfield code="a">5. Aufl</subfield>
+  </datafield>
+  <datafield tag="033A">
+    <subfield code="p">München</subfield>
+    <subfield code="n">Gräfe und Unzer</subfield>
+  </datafield>
+  <datafield tag="034D">
+    <subfield code="a">127 S</subfield>
+  </datafield>
+  <datafield tag="034M">
+    <subfield code="a">zahlr. Ill</subfield>
+  </datafield>
+  <datafield tag="036E">
+    <subfield code="a">Mein Heimtier</subfield>
+  </datafield>
+  <datafield tag="044K">
+    <subfield code="a">Ratgeber</subfield>
+  </datafield>
+  <datafield tag="044L">
+    <subfield code="S"> </subfield>
+    <subfield code="a">Ratgeber</subfield>
+  </datafield>
+  <datafield tag="044L" occurrence="01">
+    <subfield code="S"> </subfield>
+    <subfield code="a">Hamsterhaltung</subfield>
+  </datafield>
+  <datafield tag="045B">
+    <subfield code="a">Xbp 3</subfield>
+  </datafield>
+</record>

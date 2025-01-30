@@ -1,0 +1,11 @@
+lang: en
+# url: ...
+
+book:
+  title: PICA+ Specifications
+  subtitle: Formal specifications of PICA Data Formats
+  author:
+    - name: Jakob Voß
+      orcid: 0000-0002-7613-4123
+      affiliations:
+      - name: Verbundzentrale des GBV (VZG)    

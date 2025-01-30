@@ -1,0 +1,13 @@
+---
+title: References
+---
+
+## Normative References
+
+...
+
+## Informative References
+
+- Avram Schema Language (Avram)
+- Einführung in die Verarbeitung von PICA-Daten
+- ...

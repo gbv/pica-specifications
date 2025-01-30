@@ -1,0 +1,43 @@
+project:
+  type: book
+  output-dir: docs
+
+metadata-files:
+  - metadata.yaml
+
+book:
+  repo-actions:
+    - source
+    - edit
+    - issue
+  chapters:
+    - index.qmd
+    - pica-model.qmd
+    - pica-normalized.qmd
+    - pica-plain.qmd
+    - pica-xml.qmd
+    - pica-patch.qmd    
+    - pica-path.qmd
+    - pica-filter.qmd
+    - references.qmd
+  appendices:
+    - test-suites.qmd
+    - changes.qmd
+  code-links:
+    - repo  
+
+repo-url: https://github.com/gbv/pica-specifications
+  
+execute:
+  freeze: true
+
+format:
+  html:
+    number-sections: true
+    code-line-numbers: false
+    highlight-style: kate
+    theme: flatly
+    css: style.css
+    syntax-definitions:
+     - ebnf.xml
+  # pdf: default

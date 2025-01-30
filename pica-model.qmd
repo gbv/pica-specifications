@@ -1,0 +1,13 @@
+---
+title: PICA Data Model
+---
+
+This chapter defines the data model of PICA+:
+
+- records
+- levels
+- fields
+  - tags
+  - occurrences
+- subfields
+  - subfield code

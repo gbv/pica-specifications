@@ -1,0 +1,10 @@
+---
+title: PICA Filter
+---
+
+Not specified yet but two implementations exist as part of:
+
+- pica-rs
+- QA Catalogue
+
+
