@@ -14,3 +14,12 @@ This chapter defines the data model of PICA+:
 
 Tag codes (attribute tag of element datafield) must match the pattern `[0-9][0-9][0-9][A-Z@]`, that is three digits followed by an upper case letter or the ampersand sign `@` (The first digit is also known as 'level', the second and third digit are also known as 'type', and the last character is also known als 'indicator')
 
+## Specification
+
+### Collection {.unnumbered}
+
+A **PICA Collection** is a possibly empty sequence of **PICA Records**.
+
+### PICA Record {.unnumbered}
+
+A **PICA Record** is a non-empty sequence of **PICA Fields**.

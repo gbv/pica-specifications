@@ -4,6 +4,7 @@ lang: en
 book:
   title: PICA+ Specifications
   subtitle: Formal specifications of PICA Data Formats
+  date: "2025"
   author:
     - name: Jakob Voß
       orcid: 0000-0002-7613-4123

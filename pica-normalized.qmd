@@ -2,6 +2,25 @@
 title: PICA Normalized
 ---
 
-Preferred machine-readable form of PICA records.
+PICA Normalized is the preferred machine-readable serialization of PICA records (although not widely used by OCLC CBS/LBS).
+Each record is stored on a line. PICA fields end with byte code `#x1E` and subfields start with byte code `#x1F`.
 
-See <http://format.gbv.de/pica/normalized>
+The URI of this format is <https://format.gbv.de/pica/normalized>.
+
+::: {.callout-warning}
+Other PICA serialization formats are also referred to as "normalized" so the URI of the format should be used for reference.
+:::
+
+## Specification
+
+Individual records of a [PICA collection](pica-model.qmd) are separated by newline character (`#x0A`).
+
+The last record MAY be terminated by an additional newline character (`#x0A`).
+
+Each field is encoded as sequence of:
+
+- the field identifier
+- a space (`#x20`)
+- the list subfields, each
+  - ... 
+- the byte `#x1F`

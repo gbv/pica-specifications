@@ -16,15 +16,13 @@ book:
     - pica-normalized.qmd
     - pica-plain.qmd
     - pica-xml.qmd
-    - pica-patch.qmd    
     - pica-path.qmd
+    - pica-diff.qmd    
     - pica-filter.qmd
     - references.qmd
   appendices:
     - test-suites.qmd
     - changes.qmd
-  code-links:
-    - repo  
 
 repo-url: https://github.com/gbv/pica-specifications
   

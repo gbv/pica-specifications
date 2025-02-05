@@ -4,14 +4,18 @@ title: Introduction
 
 # Introduction
 
-This document includes several formal specifications and test suites for **PICA Data Format**, also known as **PICA+**.
+This document includes several formal specifications and test suites for **PICA Format**, also known as **PICA+**:
 
-The individual specifications had been created in different forms starting in 2008, partly by reverse-engineering OCLC PICA software. 
-
-- PICA+ serialization forms [PICA Normalized](pica-normalized.qmd), [PICA Plain](pica-plain.qmd) and [PICA XML](pica-xml.qmd)
-- PICA modification and diff format [PICA Patch](pica-patch.qmd)
+- [PICA Data Model](pica-model.qmd) defines the data model of PICA as foundation of all specifications
+- Some serialization forms of PICA+
+    - [PICA Normalized](pica-normalized.qmd)
+    - [PICA Plain](pica-plain.qmd) 
+    - [PICA XML](pica-xml.qmd)
 - PICA Locator language [PICA Path](pica-path.qmd) to refer to individual fields and subfields
+- PICA modification and diff format [PICA Diff/Patch](pica-diff.qmd)
 - [PICA Filter](pica-filter.qmd) to query and select records
+
+The individual specifications had been created and published in different forms starting in 2008, partly by reverse-engineering OCLC PICA software. 
 
 ## Background and motivation
 
