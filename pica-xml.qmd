@@ -1,42 +1,37 @@
 # PICA XML
 
-## Background
+PICA XML (without XML Namespace) was introduced in the early 2000s to serve PICA+ records via SRU. In 2006 the format was documented at VZG with XML Namespace and XML Schema, and a stable version 1.0 was published at July 3rd, 2008^[See <https://web.archive.org/web/20080913003622/http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>]. OCLC decided against officially adopting it, so alternative forms of encoding PICA in XML have evolved.
 
-PICA XML without XML Namespace is being used to serve PICA+ records via SRU since the early 2000s. In 2006 the format was documented at VZG with XML Namespace and XML Schema, and a stable version 1.0 was published at July 3rd, 2008^[See <https://web.archive.org/web/20080913003622/http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>]. OCLC decided against officially adopting it, so alternative forms of encoding PICA in XML have evolved as well. The format is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`.
+PICA XML is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`. An earlier version of this specification were published at <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> and <http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>.
 
-:::{.callout-warn}
-The current specification does not allow for occurrences > 99 although they are allowed on level 2 fields.
-:::
-
-:::{.callout-note}
-This is work in progress. See <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0>.
+:::{.callout-warning}
+The current specification does not allow for occurrences > 99 although they are allowed on level 2 fields!
 :::
 
 ## Definition
 
 ...
 
-## Example
-
-~~~.xml
+~~~{.xml #lst-pica-xml lst-cap="Example"}
 {{< include examples/pica-xml.xml >}}
 ~~~
 
 ## Schemas
 
-### XML Schema
+The following Schemas can be used to validate PICA XML. Not all aspects of PICA are covered
 
-The XML Schema of PICA XML is also available at <https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd>.
+validate against the XML
+invalid PICA+
 
-~~~xml
+The XML Schema (XSD) is also available at <https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd>.
+
+The Document Type Definition (DTD) defines a superset of PICA XML without restriction on attribute values and without namespace requirement.
+
+~~~{.xml #lst-pica-xsd lst-cap="PICA XML XSD"}
 {{< include schemas/pica-xml-v1-0.xsd >}}
 ~~~
 
-### DTD
-
-The following Document Type Definition (DTD) defines a superset of PICA XML without restriction on attribute values and without namespace requirement:
-
-~~~dtd
+~~~{.dtd #lst-pica-dtd lst-cap="PICA XML DTD"}
 <!ELEMENT collection (record+)>
 <!ELEMENT record (datafield+)>
 <!ELEMENT datafield (subfield+)>
@@ -46,4 +41,12 @@ The following Document Type Definition (DTD) defines a superset of PICA XML with
 <!ELEMENT subfield (#PCDATA)*>
 <!ATTLIST subfield code CDATA #IMPLIED>
 ~~~
+
+## References
+
+- MABxml - MAB in XML. http://www.ddb.de/standardisierung/formate/mabxml.htm
+- MARCXML - MARX 21 XML Schema. http://www.loc.gov/standards/marcxml/
+- SRU
+- XML - Extensible Markup Language (XML) 1.1 (Second Edition). http://www.w3.org/TR/2006/REC-xml11-20060816/
+- XMLNS - Namespaces in XML 1.0 (Second Edition). W3C Recommendation 16 August 2006. http://www.w3.org/TR/2006/REC-xml-names-20060816
 
