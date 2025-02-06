@@ -23,6 +23,11 @@ book:
   appendices:
     - test-suites.qmd
     - changes.qmd
+  sidebar:
+    style: docked
+    logo: img/gbv-vzg-logo.png
+
+
 
 repo-url: https://github.com/gbv/pica-specifications
   

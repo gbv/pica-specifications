@@ -25,3 +25,10 @@ figure > div > .sourceCode {
 .listing > figure > div {
   padding: 0.25rem 0.5rem;
 }
+.sidebar-logo {
+  max-width: 100%;
+}
+.sidebar-title {
+  display: none; /* TODO: remove */
+}
+
