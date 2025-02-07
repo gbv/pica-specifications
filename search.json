@@ -1,0 +1,224 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PICA+ Specifications",
+    "section": "",
+    "text": "1 Introduction\nThis document includes several formal specifications and test suites for PICA Format, also known as PICA+:\nThe individual specifications had been created and published in different forms starting in 2008, partly by reverse-engineering OCLC PICA software.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#background-and-motivation",
+    "href": "index.html#background-and-motivation",
+    "title": "PICA+ Specifications",
+    "section": "1.1 Background and motivation",
+    "text": "1.1 Background and motivation\n…",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgments",
+    "href": "index.html#acknowledgments",
+    "title": "PICA+ Specifications",
+    "section": "1.2 Acknowledgments",
+    "text": "1.2 Acknowledgments\n…",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "PICA+ Specifications",
+    "section": "1.3 License",
+    "text": "1.3 License\n…",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "pica-model.html",
+    "href": "pica-model.html",
+    "title": "2  PICA Data Model",
+    "section": "",
+    "text": "Specification\nThis chapter defines the data model of PICA+.\nA collection is a (possibly empty) sequence of records.\nA record is a non-empty sequence of fields. The fields are sorted as described below.\nA field is a pair of a field identifier and a non-empty list of subfields.\nA field identifier consists of a tag, optionally followed by a slash (/) followed by a occurrence\nA tag is a sequence of four characters:\nAn occurrence …\nA subfield is a pair of subfield code and subfield value.\nA subfield code is one of the characters A-Z, a-z and 0-9.\nA subfield value is a sequence of bytes not including any of the control codes (#x00 to #x1F). Subfield values SHOULD be valid sequences Unicode code points encoded in UTF-8.\nTODO: order of fields is relevant for records with multiple levels!",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>PICA Data Model</span>"
+    ]
+  },
+  {
+    "objectID": "pica-model.html#specification",
+    "href": "pica-model.html#specification",
+    "title": "2  PICA Data Model",
+    "section": "",
+    "text": "the level being either 0, 1, or 2\ntwo digits (also known as “type”)\nan uppercase letter A to Z or @ (also known as “indicator”)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>PICA Data Model</span>"
+    ]
+  },
+  {
+    "objectID": "pica-normalized.html",
+    "href": "pica-normalized.html",
+    "title": "3  PICA Normalized",
+    "section": "",
+    "text": "Specification\nPICA Normalized is the preferred machine-readable serialization of PICA records (although not widely used by OCLC CBS/LBS). Each record is stored on a line. PICA fields end with byte code #x1E and subfields start with byte code #x1F.\nThe URI of PICA Normalized is https://format.gbv.de/pica/normalized.\nCollection, record, field, field identifier, subfields, subfield code and subfield value are defined by the PICA Data Model.\nA collection is encoded as sequence of encoded records, separated by a line feed (#x0A). The last record MAY be terminated by an additional newline character (#x0A). A record is encoded as sequence of fields, each encoded as sequence of:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>PICA Normalized</span>"
+    ]
+  },
+  {
+    "objectID": "pica-normalized.html#specification",
+    "href": "pica-normalized.html#specification",
+    "title": "3  PICA Normalized",
+    "section": "",
+    "text": "the field identifier\na space (#x20)\nthe list of subfields, each the subfield indicator #x1F followed by the subfield code followed by the subfield value\nthe byte #x1E",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>PICA Normalized</span>"
+    ]
+  },
+  {
+    "objectID": "pica-plain.html",
+    "href": "pica-plain.html",
+    "title": "4  PICA Plain",
+    "section": "",
+    "text": "Specification\nPICA Normalized is the preferred human-readable serialization of PICA records. Each field is on one line, records are separated by empty lines and subfield start with $.\nThe URI of PICA Plain is https://format.gbv.de/pica/plain.\nCollection, record, field, field identifier, subfields, subfield code and subfield value are defined by the PICA Data Model.\nA collection is encoded as sequence of encoded records, separated by one or more empty lines. An empty line consists of nothing but a line feed (#x0A). Additional empty lines are allowed before the first and after the last record.\nA record is encoded as sequence of fields, each encoded as sequence of\nThe final line feed of the last field of the last record MAY be omitted.\nApplications MAY allow an additional carriage return (#x0D) before a line feed (#x0A) and sequences of space (#x20) and/or tabulator (#x09) before the line feed of empty lines.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>PICA Plain</span>"
+    ]
+  },
+  {
+    "objectID": "pica-plain.html#specification",
+    "href": "pica-plain.html#specification",
+    "title": "4  PICA Plain",
+    "section": "",
+    "text": "the field identifier\na space (#x20)\nthe list of subfields, each the character $ (#x24) followed by the subfield value with every character $ replaced by a sequence of two $$\na line feed (#xA0)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>PICA Plain</span>"
+    ]
+  },
+  {
+    "objectID": "pica-xml.html",
+    "href": "pica-xml.html",
+    "title": "5  PICA XML",
+    "section": "",
+    "text": "Definition\nPICA XML (without XML Namespace) was introduced in the early 2000s to serve PICA+ records via SRU. In 2006 the format was documented at VZG with XML Namespace and XML Schema, and a stable version 1.0 was published at July 3rd, 20081. OCLC decided against officially adopting it, so alternative forms of encoding PICA in XML have evolved.\nPICA XML is listed at https://www.loc.gov/standards/sru/recordSchemas/ with identifier info:srw/schema/5/picaXML-v1.0.\nTODO",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>PICA XML</span>"
+    ]
+  },
+  {
+    "objectID": "pica-xml.html#definition",
+    "href": "pica-xml.html#definition",
+    "title": "5  PICA XML",
+    "section": "",
+    "text": "Listing 5.1: Example\n\n\n\n&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;record xmlns=\"info:srw/schema/5/picaXML-v1.0\"\n        xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n        xsi:schemaLocation=\"info:srw/schema/5/picaXML-v1.0 https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd\"&gt;\n  &lt;datafield tag=\"001@\"&gt;\n    &lt;subfield code=\"0\"&gt;0917:14-03-05&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"001B\"&gt;\n    &lt;subfield code=\"0\"&gt;0917:23-03-05&lt;/subfield&gt;\n    &lt;subfield code=\"t\"&gt;16:15:13.000&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"001D\"&gt;\n    &lt;subfield code=\"0\"&gt;0917:23-03-05&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"001X\"&gt;\n    &lt;subfield code=\"0\"&gt;0&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"002@\"&gt;\n    &lt;subfield code=\"0\"&gt;Aau&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"003@\"&gt;\n    &lt;subfield code=\"0\"&gt;481592954&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"004A\"&gt;\n    &lt;subfield code=\"0\"&gt;3774250936&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"011@\"&gt;\n    &lt;subfield code=\"a\"&gt;2004&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"021A\"&gt;\n    &lt;subfield code=\"a\"&gt;Der Hamster&lt;/subfield&gt;\n    &lt;subfield code=\"d\"&gt;artgerecht halten, gesund ernähren, richtig verstehen&lt;/subfield&gt;\n    &lt;subfield code=\"h\"&gt;Peter Hollmann&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"028A\"&gt;\n    &lt;subfield code=\"d\"&gt;Peter&lt;/subfield&gt;\n    &lt;subfield code=\"a\"&gt;Hollmann&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"032@\"&gt;\n    &lt;subfield code=\"a\"&gt;5. Aufl&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"033A\"&gt;\n    &lt;subfield code=\"p\"&gt;München&lt;/subfield&gt;\n    &lt;subfield code=\"n\"&gt;Gräfe und Unzer&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"034D\"&gt;\n    &lt;subfield code=\"a\"&gt;127 S&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"034M\"&gt;\n    &lt;subfield code=\"a\"&gt;zahlr. Ill&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"036E\"&gt;\n    &lt;subfield code=\"a\"&gt;Mein Heimtier&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"044K\"&gt;\n    &lt;subfield code=\"a\"&gt;Ratgeber&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"044L\"&gt;\n    &lt;subfield code=\"S\"&gt; &lt;/subfield&gt;\n    &lt;subfield code=\"a\"&gt;Ratgeber&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"044L\" occurrence=\"01\"&gt;\n    &lt;subfield code=\"S\"&gt; &lt;/subfield&gt;\n    &lt;subfield code=\"a\"&gt;Hamsterhaltung&lt;/subfield&gt;\n  &lt;/datafield&gt;\n  &lt;datafield tag=\"045B\"&gt;\n    &lt;subfield code=\"a\"&gt;Xbp 3&lt;/subfield&gt;\n  &lt;/datafield&gt;\n&lt;/record&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>PICA XML</span>"
+    ]
+  },
+  {
+    "objectID": "pica-xml.html#schemas",
+    "href": "pica-xml.html#schemas",
+    "title": "5  PICA XML",
+    "section": "5.1 Schemas",
+    "text": "5.1 Schemas\nThe following Schemas can be used to validate PICA XML. Not all aspects of PICA are covered.\nThe XML Schema (XSD) is also available at https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd.\nThe Document Type Definition (DTD) defines a superset of PICA XML without restriction on attribute values and without namespace requirement.\n\n\n\nListing 5.2: PICA XML XSD\n\n\n\n&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;\n&lt;!-- \n  PICA XML 1.0 - XML Schema for XML representation of PICA data\n  Author: Jakob Voss &lt;jakob.voss@gbv.de&gt;\n  Date: 2009-07-06\n--&gt;\n&lt;xs:schema xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" \n  targetNamespace=\"info:srw/schema/5/picaXML-v1.0\" \n  xmlns=\"info:srw/schema/5/picaXML-v1.0\"&gt;\n  \n  &lt;xs:element name=\"collection\"&gt;\n    &lt;xs:complexType&gt;\n      &lt;xs:sequence&gt;\n        &lt;xs:element minOccurs=\"1\" maxOccurs=\"unbounded\" ref=\"record\"/&gt;\n      &lt;/xs:sequence&gt;\n    &lt;/xs:complexType&gt;\n  &lt;/xs:element&gt;\n  \n  &lt;xs:element name=\"record\" &gt;\n    &lt;xs:complexType&gt;\n      &lt;xs:sequence&gt;\n        &lt;xs:element minOccurs=\"1\" maxOccurs=\"unbounded\" ref=\"datafield\"/&gt;\n      &lt;/xs:sequence&gt;\n    &lt;/xs:complexType&gt;\n  &lt;/xs:element&gt;\n  \n  &lt;xs:element name=\"datafield\"&gt;\n    &lt;xs:complexType&gt;\n      &lt;xs:sequence&gt;\n        &lt;xs:element minOccurs=\"1\" maxOccurs=\"unbounded\" ref=\"subfield\"/&gt;\n      &lt;/xs:sequence&gt;\n      &lt;xs:attribute name=\"tag\" use=\"required\"&gt;\n        &lt;xs:simpleType&gt;\n          &lt;xs:restriction base=\"xs:string\"&gt;\n            &lt;xs:pattern value=\"[0-9][0-9][0-9][A-Z@]\"/&gt;\n          &lt;/xs:restriction&gt;\n        &lt;/xs:simpleType&gt;    \n      &lt;/xs:attribute&gt;\n      &lt;xs:attribute name=\"occurrence\" use=\"optional\"&gt;\n        &lt;xs:simpleType&gt;\n          &lt;xs:restriction base=\"xs:string\"&gt;\n            &lt;xs:pattern value=\"[0-9][0-9]\"/&gt;\n          &lt;/xs:restriction&gt;\n        &lt;/xs:simpleType&gt;    \n      &lt;/xs:attribute&gt;      \n    &lt;/xs:complexType&gt;\n  &lt;/xs:element&gt;\n  \n  &lt;xs:element name=\"subfield\"&gt;\n    &lt;xs:complexType mixed=\"true\"&gt;\n      &lt;xs:attribute name=\"code\" use=\"required\"&gt;\n        &lt;xs:simpleType&gt;\n          &lt;xs:restriction base=\"xs:string\"&gt;\n            &lt;xs:pattern value=\"[0-9A-Za-z]\"/&gt;\n          &lt;/xs:restriction&gt;\n        &lt;/xs:simpleType&gt;    \n      &lt;/xs:attribute&gt;      \n    &lt;/xs:complexType&gt;\n  &lt;/xs:element&gt;\n  \n&lt;/xs:schema&gt;\n\n\n\n\n\n\n\nListing 5.3: PICA XML DTD\n\n\n&lt;!ELEMENT collection (record+)&gt;\n&lt;!ELEMENT record (datafield+)&gt;\n&lt;!ELEMENT datafield (subfield+)&gt;\n&lt;!ATTLIST datafield \n  tag CDATA #REQUIRED\n  occurrence CDATA #IMPLIED&gt;\n&lt;!ELEMENT subfield (#PCDATA)*&gt;\n&lt;!ATTLIST subfield code CDATA #IMPLIED&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>PICA XML</span>"
+    ]
+  },
+  {
+    "objectID": "pica-xml.html#references",
+    "href": "pica-xml.html#references",
+    "title": "5  PICA XML",
+    "section": "5.2 References",
+    "text": "5.2 References\n\nMABxml - MAB in XML. http://www.ddb.de/standardisierung/formate/mabxml.htm\nMARCXML - MARX 21 XML Schema. http://www.loc.gov/standards/marcxml/\nSRU\nXML - Extensible Markup Language (XML) 1.1 (Second Edition). http://www.w3.org/TR/2006/REC-xml11-20060816/\nXMLNS - Namespaces in XML 1.0 (Second Edition). W3C Recommendation 16 August 2006. http://www.w3.org/TR/2006/REC-xml-names-20060816",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>PICA XML</span>"
+    ]
+  },
+  {
+    "objectID": "pica-xml.html#footnotes",
+    "href": "pica-xml.html#footnotes",
+    "title": "5  PICA XML",
+    "section": "",
+    "text": "See https://web.archive.org/web/20080913003622/http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>PICA XML</span>"
+    ]
+  },
+  {
+    "objectID": "pica-path.html",
+    "href": "pica-path.html",
+    "title": "6  PICA Path",
+    "section": "",
+    "text": "See http://format.gbv.de/query/picapath.\n\n\n\nListing 6.1: Formal grammar of PICA Path\n\n\npath              ::=  ( tag | xtag ) occurrence? subfields?\ntag               ::=  [012.] [0-9.] [0-9.] [A-Z@.]\nxtag              ::=  \"2\" [0-9.] [0-9.] [A-Z@.] \"x\" number\noccurrence        ::=  \"/\" occurrenceValue\noccurrenceValue   ::=  number \"-\" number | occurrencePattern | \"*\"\noccurrencePattern ::=  [0-9] [0-9]? [0-9]?\nsubfields         ::=  [$.]? ( [A-Za-z0-9]+ | \"*\" )\nnumber            ::=  [0-9]+",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>PICA Path</span>"
+    ]
+  },
+  {
+    "objectID": "pica-diff.html",
+    "href": "pica-diff.html",
+    "title": "7  PICA Patch",
+    "section": "",
+    "text": "See http://format.gbv.de/pica/patch.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>PICA Patch</span>"
+    ]
+  },
+  {
+    "objectID": "pica-filter.html",
+    "href": "pica-filter.html",
+    "title": "8  PICA Filter",
+    "section": "",
+    "text": "Not specified yet but two implementations exist as part of:\n\npica-rs\nQA Catalogue",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>PICA Filter</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "9  References",
+    "section": "",
+    "text": "9.1 Normative References\n…",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "references.html#informative-references",
+    "href": "references.html#informative-references",
+    "title": "9  References",
+    "section": "9.2 Informative References",
+    "text": "9.2 Informative References\n\nAvram Schema Language (Avram)\nEinführung in die Verarbeitung von PICA-Daten\n…",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "test-suites.html",
+    "href": "test-suites.html",
+    "title": "Appendix A — Test Suites",
+    "section": "",
+    "text": "…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Test Suites</span>"
+    ]
+  },
+  {
+    "objectID": "changes.html",
+    "href": "changes.html",
+    "title": "Appendix B — Changes",
+    "section": "",
+    "text": "…",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Changes</span>"
+    ]
+  }
+]
