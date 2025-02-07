@@ -2,15 +2,19 @@
 
 PICA XML (without XML Namespace) was introduced in the early 2000s to serve PICA+ records via SRU. In 2006 the format was documented at VZG with XML Namespace and XML Schema, and a stable version 1.0 was published at July 3rd, 2008^[See <https://web.archive.org/web/20080913003622/http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>]. OCLC decided against officially adopting it, so alternative forms of encoding PICA in XML have evolved.
 
-PICA XML is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`. An earlier version of this specification were published at <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> and <http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>.
+PICA XML is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`.
+
+::: {.callout-tip}
+An earlier version of this specification were published at <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> and <http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>.
+:::
 
 :::{.callout-warning}
 The current specification does not allow for occurrences > 99 although they are allowed on level 2 fields!
 :::
 
-## Definition
+## Definition {.unnumbered}
 
-...
+TODO
 
 ~~~{.xml #lst-pica-xml lst-cap="Example"}
 {{< include examples/pica-xml.xml >}}
@@ -18,10 +22,7 @@ The current specification does not allow for occurrences > 99 although they are 
 
 ## Schemas
 
-The following Schemas can be used to validate PICA XML. Not all aspects of PICA are covered
-
-validate against the XML
-invalid PICA+
+The following Schemas can be used to validate PICA XML. Not all aspects of PICA are covered.
 
 The XML Schema (XSD) is also available at <https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd>.
 

@@ -2,24 +2,30 @@
 title: PICA Data Model
 ---
 
-This chapter defines the data model of PICA+:
+This chapter defines the data model of PICA+.
 
-- records
-- levels
-- fields
-  - tags
-  - occurrences
-- subfields
-  - subfield code
+## Specification {.unnumbered}
 
-Tag codes (attribute tag of element datafield) must match the pattern `[0-9][0-9][0-9][A-Z@]`, that is three digits followed by an upper case letter or the ampersand sign `@` (The first digit is also known as 'level', the second and third digit are also known as 'type', and the last character is also known als 'indicator')
+A **collection** is a (possibly empty) sequence of **records**.
 
-## Specification
+A **record** is a non-empty sequence of **fields**. The fields are sorted as described below.
 
-### Collection {.unnumbered}
+A **field** is a pair of a **field identifier** and a non-empty list of **subfields**.
 
-A **PICA Collection** is a possibly empty sequence of **PICA Records**.
+A **field identifier** consists of a **tag**, optionally followed by a slash (`/`)  followed by a **occurrence**
 
-### PICA Record {.unnumbered}
+A **tag** is a sequence of four characters:
 
-A **PICA Record** is a non-empty sequence of **PICA Fields**.
+- the **level** being either `0`, `1`, or `2`
+- two digits (also known as "type")
+- an uppercase letter A to Z or @ (also known as "indicator")
+
+An **occurrence** ...
+
+A **subfield** is a pair of **subfield code** and **subfield value**.
+
+A **subfield code** is one of the characters A-Z, a-z and 0-9.
+
+A **subfield value** is a sequence of bytes not including any of the control codes (`#x00` to `#x1F`). Subfield values SHOULD be valid sequences Unicode code points encoded in UTF-8.
+
+TODO: order of fields is relevant for records with multiple levels!
