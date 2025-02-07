@@ -4,7 +4,7 @@
 002E $aBand$bnc
 003@ $0879397667
 021A $aDeutsches Kirchenrecht
-028A $dAnita$adFriedrichs$BVerfasserIn$4aut
+028A $dAnita$aFriedrichs$BVerfasserIn$4aut
 028C $dThomas$aThöle$BHerausgeberIn$4edt
 041A $9104704861$8|g|Deutschland
 041A/01 $910428885X$8|s|Kirchenverfassung
