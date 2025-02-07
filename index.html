@@ -22,7 +22,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -41,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-cf6bd38ce02cfde6b42a4d5e4ff5e993.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8259564ade98a49a699379e495a4026d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-27902c1d32898e2595f8b19532c2445f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -83,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Introduction</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,56 +167,42 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">PICA Data Model</span></span></a>
+  <a href="./pica-model.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA Data Model</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-normalized.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">PICA Normalized</span></span></a>
+  <a href="./pica-normalized.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA Normalized</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-plain.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">PICA Plain</span></span></a>
+  <a href="./pica-plain.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA Plain</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-xml.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PICA XML</span></span></a>
+  <a href="./pica-xml.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA XML</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-path.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">PICA Path</span></span></a>
+  <a href="./pica-path.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA Path</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-diff.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">PICA Patch</span></span></a>
+  <a href="./pica-diff.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA Diff/Patch</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pica-filter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">PICA Filter</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  <a href="./pica-filter.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">PICA Filter</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -176,14 +216,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./test-suites.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Test Suites</span></span></a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">References</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./changes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Changes</span></span></a>
+  <a href="./test-suites.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Test Suites</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./changes.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Changes</span></a>
   </div>
 </li>
       </ul>
@@ -198,11 +241,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-  <li><a href="#background-and-motivation" id="toc-background-and-motivation" class="nav-link" data-scroll-target="#background-and-motivation"><span class="header-section-number">1.1</span> Background and motivation</a></li>
-  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">1.2</span> Acknowledgments</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license"><span class="header-section-number">1.3</span> License</a></li>
+  <li><a href="#conformance-requirements" id="toc-conformance-requirements" class="nav-link" data-scroll-target="#conformance-requirements">Conformance requirements</a></li>
+  <li><a href="#related-works" id="toc-related-works" class="nav-link" data-scroll-target="#related-works">Related works</a></li>
+  <li><a href="#background-and-motivation" id="toc-background-and-motivation" class="nav-link" data-scroll-target="#background-and-motivation">Background and motivation</a></li>
+  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments">Acknowledgments</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/gbv/pica-specifications/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/gbv/pica-specifications/edit/main/index.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/gbv/pica-specifications/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -249,8 +294,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <p>This document includes several formal specifications and test suites for <strong>PICA Format</strong>, also known as <strong>PICA+</strong>:</p>
 <ul>
 <li><a href="./pica-model.html">PICA Data Model</a> defines the data model of PICA as foundation of all specifications</li>
@@ -265,19 +310,47 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="./pica-filter.html">PICA Filter</a> to query and select records</li>
 </ul>
 <p>The individual specifications had been created and published in different forms starting in 2008, partly by reverse-engineering OCLC PICA software.</p>
-<section id="background-and-motivation" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="background-and-motivation"><span class="header-section-number">1.1</span> Background and motivation</h2>
+<section id="conformance-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="conformance-requirements">Conformance requirements</h2>
+<p>The normative part of each specification is limited to the section “Specification” of each chapter.</p>
+<p>Byte codes are refered to like this: <code>#x0A</code> is byte code decmimal 10, hexadecimal <code>0A</code>.</p>
+<p>Formal grammars are included in EBNF syntax like this:</p>
+<div id="lst-ebnf-example" class="ebnf listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-ebnf-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1.1: Example of a formal grammar
+</figcaption>
+<div aria-describedby="lst-ebnf-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-ebnf-example"><pre class="sourceCode ebnf code-with-copy"><code class="sourceCode ebnf"><span id="lst-ebnf-example-1"><a href="#lst-ebnf-example-1" aria-hidden="true" tabindex="-1"></a><span class="dt">foo</span> <span class="cf">::=</span> <span class="er">#</span><span class="fu">x0D</span> <span class="cf">|</span> <span class="st">[#x1-#xD7FF]</span> <span class="cf">|</span> <span class="st">[#xE000-#xFFFD]</span> <span class="cf">|</span> <span class="st">[#x10000-#x10FFFF]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
+</section>
+<section id="related-works" class="level2">
+<h2 class="anchored" data-anchor-id="related-works">Related works</h2>
+<p>See also <span class="citation" data-cites="Voss2024">Voß (<a href="references.html#ref-Voss2024" role="doc-biblioref">2024</a>)</span> and <span class="citation" data-cites="Voss2025pica"><em>Einführung in Die Verarbeitung von PICA-Daten</em> (<a href="references.html#ref-Voss2025pica" role="doc-biblioref">2025</a>)</span></p>
+</section>
+<section id="background-and-motivation" class="level2">
+<h2 class="anchored" data-anchor-id="background-and-motivation">Background and motivation</h2>
 <p>…</p>
 </section>
-<section id="acknowledgments" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="acknowledgments"><span class="header-section-number">1.2</span> Acknowledgments</h2>
+<section id="acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgments">Acknowledgments</h2>
 <p>…</p>
 </section>
-<section id="license" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="license"><span class="header-section-number">1.3</span> License</h2>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">License</h2>
 <p>…</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Voss2025pica" class="csl-entry" role="listitem">
+<em>Einführung in Die Verarbeitung von PICA-Daten</em>. 2025. VZG. <a href="https://pro4bib.github.io/pica/">https://pro4bib.github.io/pica/</a>.
+</div>
+<div id="ref-Voss2024" class="csl-entry" role="listitem">
+Voß, Jakob. 2024. <span>“Avram Schema Language (Avram).”</span> DINI AG KIM. <a href="https://format.gbv.de/schema/avram/specification">https://format.gbv.de/schema/avram/specification</a>.
+</div>
+</div>
 </section>
 </section>
 
@@ -704,7 +777,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./pica-model.html" class="pagination-link" aria-label="PICA Data Model">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">PICA Data Model</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-title">PICA Data Model</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
