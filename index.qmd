@@ -17,9 +17,26 @@ This document includes several formal specifications and test suites for **PICA 
 
 The individual specifications had been created and published in different forms starting in 2008, partly by reverse-engineering OCLC PICA software. 
 
+## Conformance requirements
+
+The normative part of each specification is limited to the section "Specification" of each chapter.
+
+Byte codes are refered to like this: `#x0A` is byte code decmimal 10, hexadecimal `0A`.
+
+Formal grammars are included in EBNF syntax like this:
+
+```{.ebnf #lst-ebnf-example lst-cap="Example of a formal grammar"}
+foo ::= #x0D | [#x1-#xD7FF] | [#xE000-#xFFFD] | [#x10000-#x10FFFF]
+```
+
+## Related works
+
+See also @Voss2024 and @Voss2025pica
+
 ## Background and motivation
 
 ...
+
 
 ## Acknowledgments
 

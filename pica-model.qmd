@@ -12,7 +12,7 @@ A **record** is a non-empty sequence of **fields**. The fields are sorted as des
 
 A **field** is a pair of a **field identifier** and a non-empty list of **subfields**.
 
-A **field identifier** consists of a **tag**, optionally followed by a slash (`/`)  followed by a **occurrence**
+A **field identifier** consists of a **tag**, optionally followed by a slash (`/`)  followed by an **occurrence**.
 
 A **tag** is a sequence of four characters:
 
@@ -20,7 +20,7 @@ A **tag** is a sequence of four characters:
 - two digits (also known as "type")
 - an uppercase letter A to Z or @ (also known as "indicator")
 
-An **occurrence** ...
+An **occurrence** is a sequence of two or three digits, excluding sequences of zeroes only. Occurrences of fields in level 1 and 2 MUST have two digits only.
 
 A **subfield** is a pair of **subfield code** and **subfield value**.
 
@@ -28,4 +28,11 @@ A **subfield code** is one of the characters A-Z, a-z and 0-9.
 
 A **subfield value** is a sequence of bytes not including any of the control codes (`#x00` to `#x1F`). Subfield values SHOULD be valid sequences Unicode code points encoded in UTF-8.
 
-TODO: order of fields is relevant for records with multiple levels!
+::: {.callout-warning}
+This is incomplete still. Missing requirements:
+
+- order of fields is relevant for records with multiple levels!
+- occorrences of level 2 fields mixed one and two digits?
+- definition of PPN, EPN, ILN
+:::
+
