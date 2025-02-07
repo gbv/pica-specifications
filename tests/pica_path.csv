@@ -1,7 +1,0 @@
-path,description,example,result
-003@,find the ppn,example.pp,003@ $012345X
-003@$0,find the ppn without the subfield name,example.pp,12345X
-002.$a,find all CMC(?)-types,example2.pp,Text,ohne Hilfsmittel zu benutzen,Band
-028.$da,find the first and last name from all participating people,example2.pp,Anita,Friedrichs,Thomas,Thöle
-041A/*,find all DNB headings,example4.pp,041A $9104289007$8|g|Europa,041A/01 $9104470348$8|s|Kultur,041A/02 $zGeschichte
-036E,doesn't find '036E/01',example3.pp,036E $aSpringer-Lehrbuch

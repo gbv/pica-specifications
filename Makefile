@@ -3,3 +3,6 @@ docs:
 
 preview:
 	quarto preview
+
+tests:
+	tests/pica-path.sh
