@@ -19,24 +19,24 @@ book:
     - pica-path.qmd
     - pica-diff.qmd    
     - pica-filter.qmd
-    - references.qmd
   appendices:
+    - references.qmd
     - test-suites.qmd
     - changes.qmd
   sidebar:
     style: docked
     logo: img/gbv-vzg-logo.png
 
-
-
 repo-url: https://github.com/gbv/pica-specifications
   
 execute:
   freeze: true
 
+bibliography: references.bib
+
 format:
   html:
-    number-sections: true
+    number-sections: false
     code-line-numbers: false
     highlight-style: kate
     theme: flatly

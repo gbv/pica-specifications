@@ -2,12 +2,8 @@
 title: References
 ---
 
-## Normative References
+This bibliography includes both normative and informative references.
 
-...
+::: {#refs}
+:::
 
-## Informative References
-
-- Avram Schema Language (Avram)
-- Einführung in die Verarbeitung von PICA-Daten
-- ...

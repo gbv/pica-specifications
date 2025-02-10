@@ -1,3 +1,8 @@
-# PICA Patch {#sec-patch}
+# PICA Diff/Patch {#sec-patch}
 
 See <http://format.gbv.de/pica/patch>.
+
+::: {.callout-warning}
+This is incomplete still.
+:::
+

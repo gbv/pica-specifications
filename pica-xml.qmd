@@ -2,26 +2,29 @@
 
 PICA XML (without XML Namespace) was introduced in the early 2000s to serve PICA+ records via SRU. In 2006 the format was documented at VZG with XML Namespace and XML Schema, and a stable version 1.0 was published at July 3rd, 2008^[See <https://web.archive.org/web/20080913003622/http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>]. OCLC decided against officially adopting it, so alternative forms of encoding PICA in XML have evolved.
 
-PICA XML is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`. An earlier version of this specification were published at <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> and <http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>.
+PICA XML is listed at <https://www.loc.gov/standards/sru/recordSchemas/> with identifier `info:srw/schema/5/picaXML-v1.0`.
 
 :::{.callout-warning}
 The current specification does not allow for occurrences > 99 although they are allowed on level 2 fields!
 :::
 
-## Definition
+::: {.callout-tip}
+Earlier version of this specification were published at <https://verbundwiki.gbv.de/display/VZG/PICA+XML+Version+1.0> and <http://www.gbv.de/wikis/cls/PICA_XML_Version_1.0>.
+:::
 
-...
+## Specification
+
+## Examples
 
 ~~~{.xml #lst-pica-xml lst-cap="Example"}
 {{< include examples/pica-xml.xml >}}
 ~~~
 
+Reference: @Bray2006
+
 ## Schemas
 
-The following Schemas can be used to validate PICA XML. Not all aspects of PICA are covered
-
-validate against the XML
-invalid PICA+
+The following Schemas can be used to validate PICA XML. Not all aspects of PICA are covered.
 
 The XML Schema (XSD) is also available at <https://www.loc.gov/standards/sru/recordSchemas/pica-xml-v1-0.xsd>.
 
@@ -42,11 +45,10 @@ The Document Type Definition (DTD) defines a superset of PICA XML without restri
 <!ATTLIST subfield code CDATA #IMPLIED>
 ~~~
 
-## References
+## Informative References
 
 - MABxml - MAB in XML. http://www.ddb.de/standardisierung/formate/mabxml.htm
 - MARCXML - MARX 21 XML Schema. http://www.loc.gov/standards/marcxml/
 - SRU
-- XML - Extensible Markup Language (XML) 1.1 (Second Edition). http://www.w3.org/TR/2006/REC-xml11-20060816/
-- XMLNS - Namespaces in XML 1.0 (Second Edition). W3C Recommendation 16 August 2006. http://www.w3.org/TR/2006/REC-xml-names-20060816
+- @Bray2009
 

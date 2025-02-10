@@ -1,5 +1,28 @@
-# PICA Plain
+---
+title: PICA Plain
+---
 
-Preferred human-readable form of PICA records and base of [PICA Patch](pica-diff.qmd).
+PICA Normalized is the preferred human-readable serialization of PICA records. Each field is on one line, records are separated by empty lines and subfield start with `$`.
 
-See <http://format.gbv.de/pica/plain>
+::: {.callout-tip}
+A common file extension for PICA Plain is `.pp`.
+:::
+
+## Specification {.unnumbered}
+
+The URI of PICA Plain is <https://format.gbv.de/pica/plain>.
+
+**Collection**, **record**, **field**, **field identifier**, **subfields**, **subfield code** and **subfield value** are defined by the [PICA Data Model](pica-model.qmd).
+
+A **collection** is encoded as sequence of encoded **records**, separated by one or more empty lines. An empty line consists of nothing but a line feed (`#x0A`). Additional empty lines are allowed before the first and after the last record.
+
+A **record** is encoded as sequence of **fields**, each encoded as sequence of
+
+1. the **field identifier**
+2. a space (`#x20`)
+3. the list of subfields, each the character `$` (`#x24`) followed by the **subfield value** with every character `$` replaced by a sequence of two `$$`
+4. a line feed (`#xA0`)
+
+The final line feed of the last **field** of the last **record** MAY be omitted.
+
+Applications MAY allow an additional carriage return (`#x0D`) before a line feed (`#x0A`) and sequences of space (`#x20`) and/or tabulator (`#x09`) before the line feed of empty lines.
