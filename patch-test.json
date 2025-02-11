@@ -1,0 +1,20 @@
+[
+  {
+    "name": "003@ $012345X\n- 021A $aEin Buch$hzum Lesen\n+ 021A $aEin gutes Buch$hzum Lesen und Genie\u00dfen",
+    "status": "passed"
+  },
+  {
+    "name": "- 028A $dAnita$aFriedrichs$BVerfasserIn$4aut\n- 028C $dThomas$aThole$BHerausgeberIn$4edt\n+ 028C $dAnita$aFriedrichs$BHerausgeberIn$4edt\n+ 028A $dThomas$aTh\u00f6le$BVerfasserIn$4aut",
+    "status": "failed",
+    "message": "records don't match, expected: 028C $dThomas$aThole$BHerausgeberIn$4edt"
+  },
+  {
+    "name": "036E $aSpringer-Lehrbuch\n- 036E/01 $aSpringerLink$pB\u00fccher",
+    "status": "failed",
+    "message": "Can't use an undefined value as an ARRAY reference at /usr/local/share/perl/5.34.0/PICA/Schema.pm line 292, <__ANONIO__> line 2."
+  },
+  {
+    "name": "003@ $0643957510\n+ 010@ $ager\n+ 029F $9101570597$8Universit\u00e4tsmuseum f\u00fcr Kulturgeschichte (Marburg)",
+    "status": "passed"
+  }
+]
