@@ -215,7 +215,7 @@
     "href": "test-suites.html",
     "title": "Appendix B — Test Suites",
     "section": "",
-    "text": "Pica Path\ndata = FileAttachment(\"path-test.json\").json()\nInputs.table(data)",
+    "text": "PICA Path\nRepository directory tests contains tests and test runners to check the conformance of implementations. Some tests use sample files from directory examples.\ndata = FileAttachment(\"path-test.json\").json()\nInputs.table(data)",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Test Suites</span>"
