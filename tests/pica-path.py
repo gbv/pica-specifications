@@ -7,6 +7,9 @@ script_dir = Path(__file__).resolve().parent
 csv_file = script_dir / "pica-path.csv"
 records_dir = script_dir.parent / "examples"
 results = []
+version_result = subprocess.run(["picadata", "--version"], capture_output=True, text=True, check=True)
+version = version_result.stdout.strip()
+
 
 with open(csv_file, newline='', encoding='utf-8') as f:
     reader = csv.reader(f)
@@ -25,5 +28,8 @@ with open(csv_file, newline='', encoding='utf-8') as f:
             status = "passed"
         else:
             status = "failed"
-        results.append({"name": path, "description": description, "status": status})
-print(json.dumps(results, indent=2))  
+        results.append({"name": path, "description": description, "picadata "+version: status})
+
+output_file = script_dir / "path-test.json"
+with open(output_file, "w") as f:
+    json.dump(results, f, indent=2, ensure_ascii=False)

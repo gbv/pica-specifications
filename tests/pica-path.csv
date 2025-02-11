@@ -5,3 +5,4 @@ path,description,example,result
 028.$da,find the first and last name from all participating people,example2.pp,Anita,Friedrichs,Thomas,Thole
 041A/*,find all DNB headings,example4.pp,041A $9104289007$8|g|Europa,041A/01 $9104470348$8|s|Kultur,041A/02 $zGeschichte
 036E,doesn't find '036E/01',example3.pp,036E $aSpringer-Lehrbuch
+021A.a,uses '.' instead of '$' to get the subfield,example3.pp,Elektromagnetische Felder

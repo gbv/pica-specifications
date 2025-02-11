@@ -1,12 +1,16 @@
 from pathlib import Path
 import subprocess
+import json
 
 script_dir = Path(__file__).resolve().parent
 records_dir = script_dir.parent / "examples"
+results = []
 
 files = sorted([f.name for f in records_dir.iterdir() if f.is_file() and f.name.endswith("pp")])
 
 file_groups = {}
+version_result = subprocess.run(["picadata", "--version"], capture_output=True, text=True, check=True)
+version = version_result.stdout.strip()
 
 for file in files:
     for prefix in ("example", "patch", "result"):
@@ -17,6 +21,7 @@ for file in files:
             file_groups[core_id].append(file)
 
 for files in file_groups.values():
+    message = ""
     example_path = records_dir / files[0]
     patch_path = records_dir / files[1]
     result_path = records_dir / files[2]
@@ -27,10 +32,13 @@ for files in file_groups.values():
     result = subprocess.run(["picadata", "patch", example_path, patch_path], capture_output=True, text=True, check=True)
     actual_output = result.stdout.strip()
     if actual_output == expected_output:
-        print(f"OK {patch}")
+        status = "passed"
+        results.append({"name": patch.splitlines(), "picadata "+version: status})
     else:
-        print("---got:")
-        print(actual_output)
-        print("---expected:")
-        print(expected_output)
-    print()
+        status = "failed"
+        message = result.stderr.strip()
+        results.append({"name": patch.splitlines(), "picadata "+version: status, "message": message})
+    
+output_file = script_dir / "patch-test.json"
+with open(output_file, "w") as f:
+    json.dump(results, f, indent=2, ensure_ascii=False)
