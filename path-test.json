@@ -1,0 +1,32 @@
+[
+  {
+    "name": "003@",
+    "description": "find the ppn",
+    "status": "passed"
+  },
+  {
+    "name": "003@$0",
+    "description": "find the ppn without the subfield name",
+    "status": "passed"
+  },
+  {
+    "name": "002.$a",
+    "description": "find all CMC-types",
+    "status": "passed"
+  },
+  {
+    "name": "028.$da",
+    "description": "find the first and last name from all participating people",
+    "status": "passed"
+  },
+  {
+    "name": "041A/*",
+    "description": "find all DNB headings",
+    "status": "passed"
+  },
+  {
+    "name": "036E",
+    "description": "doesn't find '036E/01'",
+    "status": "passed"
+  }
+]

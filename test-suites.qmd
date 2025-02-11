@@ -2,4 +2,13 @@
 title: Test Suites
 ---
 
-...
+## Pica Path
+
+
+```{ojs}
+data = FileAttachment("path-test.json").json()
+```
+
+```{ojs}
+Inputs.table(data)
+```
