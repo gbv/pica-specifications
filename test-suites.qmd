@@ -2,8 +2,13 @@
 title: Test Suites
 ---
 
-## Pica Path
+Repository directory [tests](https://github.com/gbv/pica-specifications/tree/main/tests) contains tests and test runners to check the conformance of implementations. Some tests use sample files from directory [examples](https://github.com/gbv/pica-specifications/tree/main/examples).
 
+::: {.callout-note}
+This is work in progress!
+:::
+
+## PICA Path
 
 ```{ojs}
 data = FileAttachment("path-test.json").json()
