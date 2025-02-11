@@ -215,7 +215,7 @@
     "href": "test-suites.html",
     "title": "Appendix B — Test Suites",
     "section": "",
-    "text": "…",
+    "text": "Pica Path\ndata = FileAttachment(\"path-test.json\").json()\nInputs.table(data)",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Test Suites</span>"
