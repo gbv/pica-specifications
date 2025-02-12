@@ -9,13 +9,19 @@ Repository directory [tests](https://github.com/gbv/pica-specifications/tree/mai
 ::: {.callout-note}
 This is work in progress!
 :::
+```{ojs}
+path_data = FileAttachment("tests/path-test.json").json()
+patch_data = FileAttachment("tests/patch-test.json").json()
+```
 
 ## PICA Path
 
 ```{ojs}
-data = FileAttachment("tests/path-test.json").json()
+Inputs.table(path_data)
 ```
 
+## PICA Patch
+
 ```{ojs}
-Inputs.table(data)
+Inputs.table(patch_data)
 ```
