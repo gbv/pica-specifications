@@ -11,7 +11,7 @@ files = sorted([f.name for f in records_dir.iterdir() if f.is_file() and f.name.
 file_groups = {}
 version_result = subprocess.run(["picadata", "--version"], capture_output=True, text=True, check=True)
 version = version_result.stdout.strip()
-
+test_num = 1
 for file in files:
     for prefix in ("example", "patch", "result"):
         if file.startswith(prefix):
@@ -33,12 +33,11 @@ for files in file_groups.values():
     actual_output = result.stdout.strip()
     if actual_output == expected_output:
         status = "passed"
-        results.append({"name": patch.splitlines(), "picadata "+version: status})
+        results.append({"name": test_num, "picadata "+version: status})
     else:
         status = "failed"
         message = result.stderr.strip()
-        results.append({"name": patch.splitlines(), "picadata "+version: status, "message": message})
-    
-output_file = script_dir / "patch-test.json"
-with open(output_file, "w") as f:
-    json.dump(results, f, indent=2, ensure_ascii=False)
+        results.append({"name": test_num, "picadata "+version: status, "message": message})
+    test_num += 1
+
+print(json.dumps(results, indent=2, ensure_ascii=False))
