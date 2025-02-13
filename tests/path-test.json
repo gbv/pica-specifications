@@ -3,56 +3,91 @@
     "name": "003@",
     "description": "find the ppn",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "passed",
+    "pica-rs 1.0.1": "passed",
     "message": ""
   },
   {
     "name": "003@$0",
     "description": "find the ppn without the subfield name",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "failed",
-    "message": "error: invalid tag matcher\n"
+    "pica-rs 1.0.1": "failed",
+    "message": "error: invalid query '003@$0'\n"
   },
   {
     "name": "002.$a",
     "description": "find all CMC-types",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "failed",
-    "message": "error: invalid tag matcher\n"
+    "pica-rs 1.0.1": "failed",
+    "message": "error: invalid query '002.$a'\n"
   },
   {
     "name": "028.$da",
     "description": "find the first and last name from all participating people",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "failed",
-    "message": "error: invalid tag matcher\n"
+    "pica-rs 1.0.1": "failed",
+    "message": "error: invalid query '028.$da'\n"
   },
   {
     "name": "041A/*",
     "description": "find all DNB headings",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "passed",
+    "pica-rs 1.0.1": "passed",
     "message": ""
   },
   {
     "name": "036E",
-    "description": "doesn't find '036E/01'",
+    "description": "doesn't find '036E/10'",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "passed",
+    "pica-rs 1.0.1": "passed",
+    "message": ""
+  },
+  {
+    "name": "036E/0-9",
+    "description": "occurrence range",
+    "picadata 2.12": "passed",
+    "pica-rs 1.0.1": "failed",
+    "message": "error: invalid occurrence matcher '/0-9'\n"
+  },
+  {
+    "name": "036E/0-99",
+    "description": "occurrence range",
+    "picadata 2.12": "passed",
+    "pica-rs 1.0.1": "failed",
+    "message": "error: invalid occurrence matcher '/0-99'\n"
+  },
+  {
+    "name": "036E/00-99",
+    "description": "occurrence range",
+    "picadata 2.12": "passed",
+    "pica-rs 1.0.1": "failed",
+    "message": ""
+  },
+  {
+    "name": "036E/10",
+    "description": "occurrence",
+    "picadata 2.12": "passed",
+    "pica-rs 1.0.1": "passed",
+    "message": ""
+  },
+  {
+    "name": "036E/*",
+    "description": "all occurrences",
+    "picadata 2.12": "passed",
+    "pica-rs 1.0.1": "passed",
     "message": ""
   },
   {
     "name": "021A.a",
     "description": "uses '.' instead of '$' to get the subfield",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "failed",
-    "message": "error: invalid tag matcher\n"
+    "pica-rs 1.0.1": "passed",
+    "message": ""
   },
   {
     "name": "021Aa",
-    "description": "no prefix infront of the subfield is possible",
+    "description": "no prefix in front of the subfield is possible",
     "picadata 2.12": "passed",
-    "pica-rs pica 0.25.0": "failed",
-    "message": "error: invalid tag matcher\n"
+    "pica-rs 1.0.1": "failed",
+    "message": "error: invalid query '021Aa'\n"
   }
 ]
