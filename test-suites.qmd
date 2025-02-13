@@ -9,6 +9,7 @@ Repository directory [tests](https://github.com/gbv/pica-specifications/tree/mai
 ::: {.callout-note}
 This is work in progress!
 :::
+
 ```{ojs}
 path_data = FileAttachment("tests/path-test.json").json()
 patch_data = FileAttachment("tests/patch-test.json").json()
@@ -16,12 +17,20 @@ patch_data = FileAttachment("tests/patch-test.json").json()
 
 ## PICA Path
 
+Test suite from file [pica-path.csv](tests/pica-path.csv) tested with [picadata] and [pica-rs].
+
 ```{ojs}
 Inputs.table(path_data)
 ```
 
 ## PICA Patch
 
+Run test suite from file [pica-patch.csv](tests/pica-patch.csv) tested with [picadata].
+
 ```{ojs}
 Inputs.table(patch_data)
 ```
+
+[picadata]: https://metacpan.org/dist/PICA-Data/view/script/picadata
+[pica-rs]: https://deutsche-nationalbibliothek.github.io/pica-rs/ 
+

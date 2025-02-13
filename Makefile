@@ -4,5 +4,9 @@ docs:
 preview:
 	quarto preview
 
-tests:
-	tests/pica-path.sh
+deps:
+	python -m venv .venv
+	.venv/bin/pip install -r tests/requirements.txt
+
+suite:
+	tests/run-suite.sh

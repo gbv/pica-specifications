@@ -11,7 +11,7 @@
   {
     "name": 3,
     "picadata 2.12": "failed",
-    "message": "Can't use an undefined value as an ARRAY reference at /usr/local/share/perl/5.34.0/PICA/Schema.pm line 292, <__ANONIO__> line 2."
+    "message": "Can't use an undefined value as an ARRAY reference at /home/voj/perl5/lib/perl5/PICA/Schema.pm line 292, <__ANONIO__> line 2."
   },
   {
     "name": 4,

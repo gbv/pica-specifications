@@ -1,9 +1,14 @@
-path,description,example,result
-003@,find the ppn,example.pp,003@ $012345X
-003@$0,find the ppn without the subfield name,example.pp,12345X
-002.$a,find all CMC-types,example2.pp,Text,ohne Hilfsmittel zu benutzen,Band
-028.$da,find the first and last name from all participating people,example2.pp,Anita,Friedrichs,Thomas,Thole
-041A/*,find all DNB headings,example4.pp,041A $9104289007$8|g|Europa,041A/01 $9104470348$8|s|Kultur,041A/02 $zGeschichte
-036E,doesn't find '036E/01',example3.pp,036E $aSpringer-Lehrbuch
-021A.a,uses '.' instead of '$' to get the subfield,example3.pp,Elektromagnetische Felder
-021Aa,no prefix infront of the subfield is possible,example3.pp,Elektromagnetische Felder
+path,sf,description,example,result
+003@,0,find the ppn,example,003@ $012345X
+003@$0,1,find the ppn without the subfield name,example,12345X
+002.$a,1,find all CMC-types,example2,Text,ohne Hilfsmittel zu benutzen,Band
+028.$da,1,find the first and last name from all participating people,example2,Anita,Friedrichs,Thomas,Thole
+041A/*,0,find all DNB headings,example4,041A $9104289007$8|g|Europa,041A/01 $9104470348$8|s|Kultur,041A/02 $zGeschichte
+036E,0,doesn't find '036E/10',example3,036E $aSpringer-Lehrbuch,
+036E/0-9,0,occurrence range,example3,036E $aSpringer-Lehrbuch,
+036E/0-99,0,occurrence range,example3,036E $aSpringer-Lehrbuch,036E/10 $aSpringerLink$pBücher
+036E/00-99,0,occurrence range,example3,036E $aSpringer-Lehrbuch,036E/10 $aSpringerLink$pBücher
+036E/10,0,occurrence,example3,036E/10 $aSpringerLink$pBücher
+036E/*,0,all occurrences,example3,036E $aSpringer-Lehrbuch,036E/10 $aSpringerLink$pBücher
+021A.a,1,uses '.' instead of '$' to get the subfield,example3,Elektromagnetische Felder
+021Aa,1,no prefix in front of the subfield is possible,example3,Elektromagnetische Felder
