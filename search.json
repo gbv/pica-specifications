@@ -215,7 +215,18 @@
     "href": "test-suites.html",
     "title": "Appendix B — Test Suites",
     "section": "",
-    "text": "PICA Path\nRepository directory tests contains tests and test runners to check the conformance of implementations. Some tests use sample files from directory examples.\ndata = FileAttachment(\"tests/path-test.json\").json()\nInputs.table(data)",
+    "text": "PICA Path\nRepository directory tests contains tests and test runners to check the conformance of implementations. Some tests use sample files from directory examples.\nInputs.table(path_data)",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Test Suites</span>"
+    ]
+  },
+  {
+    "objectID": "test-suites.html#pica-patch",
+    "href": "test-suites.html#pica-patch",
+    "title": "Appendix B — Test Suites",
+    "section": "PICA Patch",
+    "text": "PICA Patch\n\nInputs.table(patch_data)",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>B</span>  <span class='chapter-title'>Test Suites</span>"

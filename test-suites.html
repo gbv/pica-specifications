@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-cf6bd38ce02cfde6b42a4d5e4ff5e993.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-27902c1d32898e2595f8b19532c2445f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-1e5728aa2bc0d4c7b13f5045731c0a89.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -223,6 +223,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#pica-path" id="toc-pica-path" class="nav-link active" data-scroll-target="#pica-path">PICA Path</a></li>
+  <li><a href="#pica-patch" id="toc-pica-patch" class="nav-link" data-scroll-target="#pica-patch">PICA Patch</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/gbv/pica-specifications/blob/main/test-suites.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/gbv/pica-specifications/edit/main/test-suites.qmd" class="toc-action"><i class="bi empty"></i>Edit this page</a></li><li><a href="https://github.com/gbv/pica-specifications/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -262,20 +263,41 @@ Note
 <p>This is work in progress!</p>
 </div>
 </div>
-<section id="pica-path" class="level2">
-<h2 class="anchored" data-anchor-id="pica-path">PICA Path</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="15" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 14;"><span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"tests/path-test.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="13" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 12;"><span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>path_data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"tests/path-test.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>patch_data <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"tests/patch-test.json"</span>)<span class="op">.</span><span class="fu">json</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-1" data-nodetype="declaration">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
 
 </div>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<section id="pica-path" class="level2">
+<h2 class="anchored" data-anchor-id="pica-path">PICA Path</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="19" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 18;"><span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="19" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 18;"><span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(path_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</section>
+<section id="pica-patch" class="level2">
+<h2 class="anchored" data-anchor-id="pica-patch">PICA Patch</h2>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="25" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 24;"><span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>Inputs<span class="op">.</span><span class="fu">table</span>(patch_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="expression">
 
 </div>
 </div>
@@ -286,7 +308,7 @@ Note
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRhdGEgPSBGaWxlQXR0YWNobWVudChcInRlc3RzL3BhdGgtdGVzdC5qc29uXCIpLmpzb24oKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiSW5wdXRzLnRhYmxlKGRhdGEpXG4ifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InBhdGhfZGF0YSA9IEZpbGVBdHRhY2htZW50KFwidGVzdHMvcGF0aC10ZXN0Lmpzb25cIikuanNvbigpXG5wYXRjaF9kYXRhID0gRmlsZUF0dGFjaG1lbnQoXCJ0ZXN0cy9wYXRjaC10ZXN0Lmpzb25cIikuanNvbigpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJJbnB1dHMudGFibGUocGF0aF9kYXRhKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiSW5wdXRzLnRhYmxlKHBhdGNoX2RhdGEpXG4ifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
